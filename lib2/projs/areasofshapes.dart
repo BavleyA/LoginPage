@@ -1,0 +1,31 @@
+import 'dart:io';
+import 'shape.dart';
+import 'circle.dart';
+import 'rectangle.dart';
+main(){
+ Circle c=Circle();
+ print('enter circle radius');
+ double ra=double.parse(stdin.readLineSync()!);
+ c.setRadius(ra);
+ print('enter circle color');
+ String co=(stdin.readLineSync()!);
+ c.setColor(co);
+ c.setFilled(true);
+ c.print(); print('\n');
+ print('circle area : ${c.getArea()}');
+ print('circle perimeter : ${c.getPerimeter()} \n');
+ Rectangle rr=Rectangle();
+ print('enter rectangle width');
+ double wi=double.parse(stdin.readLineSync()!);
+ rr.setWidth(wi);
+ print('enter rectangle length');
+ double le=double.parse(stdin.readLineSync()!);
+ rr.setLength(le);
+ print('enter rectangle color');
+ String rc=(stdin.readLineSync()!);
+ rr.setColor(rc);
+ rr.setFilled(true);
+ rr.print(); print('\n');
+ print('area of rectanle : ${rr.getArea()}');
+ print('perimeter of rectanle : ${rr.getPerimeter()}');
+}
